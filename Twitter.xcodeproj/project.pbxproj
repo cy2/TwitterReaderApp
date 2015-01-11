@@ -46,6 +46,7 @@
 		FF7093D41A5B33CF00C175CB /* TwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTests.swift; sourceTree = "<group>"; };
 		FF7093E51A5B386B00C175CB /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		FF7093E71A5B4FF700C175CB /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		FF8564CD1A6249EF00A9186F /* MyRoughwork.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyRoughwork.playground; sourceTree = "<group>"; };
 		FFBAB3B61A6238BC00068CE0 /* MyStack.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyStack.playground; sourceTree = "<group>"; };
 		FFD22A7D1A5DE504003147B0 /* tweet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tweet.json; path = "../../../LectureNotes/Sample Projects/Week 1/TweetFellows/TweetFellows/tweet.json"; sourceTree = "<group>"; };
 		FFD22A7F1A5DE548003147B0 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 			children = (
 				FFD22A931A61F887003147B0 /* ParseJsonContent.playground */,
 				FFBAB3B61A6238BC00068CE0 /* MyStack.playground */,
+				FF8564CD1A6249EF00A9186F /* MyRoughwork.playground */,
 			);
 			name = Playgrounds;
 			path = Twitter;

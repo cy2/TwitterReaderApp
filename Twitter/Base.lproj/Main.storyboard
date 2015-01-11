@@ -28,43 +28,60 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Twitter UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygL-Ua-2Ox">
-                                                    <rect key="frame" x="61" y="9" width="110" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="11"/>
+                                                    <rect key="frame" x="61" y="6" width="110" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="13"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tweet String" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZJ-Md-sOP">
-                                                    <rect key="frame" x="156" y="5" width="223" height="29.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweet String" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZJ-Md-sOP">
+                                                    <rect key="frame" x="61" y="27" width="223" height="29.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="JiN-5B-hhK"/>
+                                                        <constraint firstAttribute="width" constant="250" id="JiN-5B-hhK"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="kfM-3d-e8a"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-4O-hir">
-                                                    <rect key="frame" x="8" y="7" width="50" height="50"/>
+                                                    <rect key="frame" x="4" y="7" width="50" height="50"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="A1Z-pe-xPa"/>
                                                         <constraint firstAttribute="height" constant="50" id="kNw-Dp-a9i"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-pg-zaf" userLabel="handle">
+                                                    <rect key="frame" x="170" y="2" width="114" height="17.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="114" id="XHK-Rp-yKh"/>
+                                                        <constraint firstAttribute="height" constant="21" id="opn-Z7-TSb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwq-yS-L7R">
-                                                    <rect key="frame" x="61" y="24" width="90" height="16"/>
+                                                    <rect key="frame" x="315" y="0.0" width="90" height="16"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="9"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <constraints>
-                                                <constraint firstItem="yPY-4O-hir" firstAttribute="top" secondItem="ygL-Ua-2Ox" secondAttribute="top" id="4Me-46-F2Y"/>
+                                                <constraint firstItem="ygL-Ua-2Ox" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="8" id="51e-w2-JHl"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="yPY-4O-hir" secondAttribute="bottom" constant="7" id="8Hk-2p-M4R"/>
-                                                <constraint firstItem="jwq-yS-L7R" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="30" id="9hJ-Un-AQM"/>
                                                 <constraint firstItem="yPY-4O-hir" firstAttribute="leading" secondItem="eSb-L8-e8H" secondAttribute="leadingMargin" id="FMt-bc-1ev"/>
-                                                <constraint firstItem="BZJ-Md-sOP" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="1" id="HGc-i5-2cV"/>
                                                 <constraint firstItem="ygL-Ua-2Ox" firstAttribute="leading" secondItem="yPY-4O-hir" secondAttribute="trailing" id="JnN-YT-FdH"/>
+                                                <constraint firstItem="BZJ-Md-sOP" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="9" id="NQS-Df-yN4"/>
+                                                <constraint firstItem="ygL-Ua-2Ox" firstAttribute="leading" secondItem="yPY-4O-hir" secondAttribute="trailing" constant="3" id="Rd3-gr-aaQ"/>
+                                                <constraint firstItem="ZTb-pg-zaf" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" id="Tzi-yI-qfQ"/>
+                                                <constraint firstItem="jwq-yS-L7R" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="-8" id="UeM-pK-MLc"/>
+                                                <constraint firstItem="ygL-Ua-2Ox" firstAttribute="leading" secondItem="BZJ-Md-sOP" secondAttribute="leading" id="Zx2-7w-KQq"/>
                                                 <constraint firstItem="yPY-4O-hir" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="11" id="aHR-a4-GZX"/>
                                                 <constraint firstItem="yPY-4O-hir" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="7" id="aZS-jr-DR1"/>
+                                                <constraint firstItem="BZJ-Md-sOP" firstAttribute="top" secondItem="ygL-Ua-2Ox" secondAttribute="bottom" id="fHB-95-AMm"/>
+                                                <constraint firstItem="yPY-4O-hir" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" constant="-1" id="k55-3N-m5U"/>
+                                                <constraint firstItem="ygL-Ua-2Ox" firstAttribute="top" secondItem="eSb-L8-e8H" secondAttribute="topMargin" id="se8-ZC-C3P"/>
+                                                <constraint firstItem="ygL-Ua-2Ox" firstAttribute="top" secondItem="ZTb-pg-zaf" secondAttribute="top" id="vUl-E1-zbI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BZJ-Md-sOP" secondAttribute="bottom" constant="1" id="zgx-HY-mBN"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -73,6 +90,7 @@
                                             <outlet property="userImage" destination="yPY-4O-hir" id="See-vZ-XSI"/>
                                             <outlet property="userLocation" destination="jwq-yS-L7R" id="xXw-hX-0im"/>
                                             <outlet property="userNameLabel" destination="ygL-Ua-2Ox" id="qpa-lU-ssU"/>
+                                            <outlet property="userTwitterHandle" destination="ZTb-pg-zaf" id="u5D-Fj-DjJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

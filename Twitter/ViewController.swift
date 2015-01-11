@@ -82,24 +82,66 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     cell.tweetLabel.text = tweet.text
     cell.userNameLabel.text = tweet.username
     cell.userLocation.text = tweet.userlocation
-   
     
-    //Create an image object
-   
-    //assign the image value to the cell
-    if let tweetimageURL = NSURL(string: tweet.imageURL) {
-     
-      //convert url to data object
-      if let imageData = NSData(contentsOfURL: tweetimageURL) {
+    //check if the tweet is a retweet amd update the image as appropriate
+    if tweet.isARetweet() == false{
+      
+        //not a retweet
+        cell.userTwitterHandle.text = "@"//get handle
+      
+      
+      //Create an image object NOTE: change this to the network controller version on a background thread
+      
+        //assign the image value to the cell
+          if let tweetimageURL = NSURL(string: tweet.imageURL) {
         
-        //create image from data object
-        cell.userImage.image = UIImage(data: imageData)
+              //convert url to data object
+              if let imageData = NSData(contentsOfURL: tweetimageURL) {
+          
+                //create image from data object
+                cell.userImage.image = UIImage(data: imageData)
+          
+              }
         
-      }
+          }
+      
+      
+    }else{
+      
+      //is a retweet
+       cell.userTwitterHandle.text = tweet.retweetID!
+      //println( "Retweeted by: \(tweet.retweetID!) ")
+      
+      //grab the new image url
+      self.networkController.fetchUserImgURLByHandle (tweet.retweetID!, completionHandler: { (tweets, errorDescription) -> () in
+      
+      })
+
+      //Create an image object
+      
+      tweet.retweetImageURL = tweet.imageURL
+      let retweetURL = tweet.retweetImageURL!
+      
+          //assign the image value to the cell
+          if let retweetimageURL = NSURL(string: retweetURL) {
+      
+            //convert url to data object
+            if let imageData = NSData(contentsOfURL: retweetimageURL) {
+      
+              //create image from data object
+              cell.userImage.image = UIImage(data: imageData)
+      
+            }
+      
+          }
       
     }
-    return cell
-  }//eo tableView
+ 
+      
+        return cell
+   
+      
+      }//eo tableView
   
   
   

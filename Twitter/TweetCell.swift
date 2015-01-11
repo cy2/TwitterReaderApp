@@ -15,7 +15,8 @@ class TweetCell: UITableViewCell {
   @IBOutlet weak var tweetLabel : UILabel!
   @IBOutlet weak var userLocation : UILabel!
   @IBOutlet weak var userImage: UIImageView!
-  
+  @IBOutlet weak var userTwitterHandle: UILabel!
+  //need one for date
   
     override func awakeFromNib() {
         super.awakeFromNib()

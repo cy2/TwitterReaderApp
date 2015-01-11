@@ -180,7 +180,7 @@ func fetchInfoForTweet(tweetID : String, completionHandler : ([String : AnyObjec
   
   
   
-  //fetch the image
+  //fetch an image on background thread
   
   func fetchImageForTweet(tweet : Tweet, completionHandler: (UIImage?) -> ()) {
     
@@ -264,6 +264,72 @@ func fetchInfoForTweet(tweetID : String, completionHandler : ([String : AnyObjec
   
   
   }// eo fetchTimelineForUser
+  
+  
+    //Grabs the array of tweets for a specific user
+  func fetchUserImgURLByHandle(retweetHandle: String, completionHandler: ([Tweet]?,String? ) -> () ){
+    
+      let userTimelineRequestURL = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=\(retweetHandle)")
+      
+      //set up the request
+      let userTimelineRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: userTimelineRequestURL!, parameters: nil)
+      
+      //sign the account
+      userTimelineRequest.account = self.twitterAccount
+      
+      //send the request
+      userTimelineRequest.performRequestWithHandler {
+        (data, response, error ) -> Void in
+        
+        
+        
+        ///if data came back, pass the dictionary to the func fetchImageForTweet completion handler
+        if error == nil {
+          
+          switch response.statusCode {
+            
+          case 200...299:
+            if let jsonArray = NSJSONSerialization.JSONObjectWithData(data, options: nil, error:nil) as? [AnyObject] {
+              
+              var tweets = [Tweet]()
+              
+              for object in jsonArray {
+                
+                if let jsonDictionary = object as? [String : AnyObject] {
+                  
+                  
+                  println(">>>Grabbing \(jsonDictionary)")
+                  
+                  //grab and return the retweet url out of the json
+                  //break out of loop, only need to grab it once
+                  break
+                  
+                  
+                }
+              }
+              
+              
+              NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                completionHandler(tweets, nil)
+              })
+              
+            }
+            
+            
+          default:
+            println("Got no data back: case  \(response.statusCode)")
+          }
+        }else{
+          
+          println("error processing request")
+          
+        }
+        
+        
+      }
+
+  }// eo fetchUserImgURLByHandle
+  
   
   
   

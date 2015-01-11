@@ -19,11 +19,14 @@ class Tweet {
   var username : String!
   var userlocation: String!
   var imageURL : String!
+  var image : UIImage?
   var tweetIDint : Int!
   var userID : String!
   var tweetID : String!
-  var image : UIImage?
   var favorites : String!
+  var retweetID : String?
+  var retweetImageURL : String?
+  var retweetImage : UIImage?
   
   init( _ jsonDictionary : [String : AnyObject]) {
     self.tweetID = jsonDictionary["id_str"] as String
@@ -66,14 +69,85 @@ class Tweet {
       
     }
     
-    
-    
-  
-  
-  
-  
   
   }
+  
+  
+  func isARetweet() -> Bool {
+    
+    var isARetweetStatus = false
+    
+    let token = NSCharacterSet(charactersInString: " ")
+    
+    var tweetText: String = self.text
+    
+    
+    var wordsInSentence = tweetText.componentsSeparatedByCharactersInSet(token)
+    var handle: String = ""
+    
+    
+    for word in wordsInSentence{
+      
+      if word.hasPrefix("@"){
+        handle = word
+        isARetweetStatus = true
+        setRetweetHandle()
+        break
+      }
+      
+      
+    }
+  
+    
+    return isARetweetStatus
+  }
+  
+  
+  
+  
+  func setRetweetHandle(){
+    
+    let token = NSCharacterSet(charactersInString: " ")
+    
+    var tweetText: String = self.text
+    
+    
+    var wordsInSentence = tweetText.componentsSeparatedByCharactersInSet(token)
+    var handle: String = ""
+    
+    
+    for word in wordsInSentence{
+      
+      if word.hasPrefix("@"){
+        handle = word
+        break
+      }
+      
+      
+    }
+    
+    
+    //Strip off the : from the end
+    
+    if(handle.hasSuffix(":")){
+      
+      let characterCount = countElements(handle)
+      let removeLastCharacter = characterCount - 1
+      
+      handle.substringToIndex(advance(handle.startIndex, removeLastCharacter))
+      
+    }
+    
+    
+    self.retweetID = handle
+    println("Retweet Handle = \(self.retweetID)")
+    
+    
+    
+  }
+  
+  
+  
   
   
   
