@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="USER_CELL" rowHeight="199" id="nPy-6T-hqj" customClass="TweetNibCell" customModule="Twitter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="199"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nPy-6T-hqj" id="q2Q-te-TnZ">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wks-2v-eEi">
+                        <rect key="frame" x="8" y="8" width="79" height="79.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="79.5" id="4xC-No-4eR"/>
+                            <constraint firstAttribute="width" constant="75" id="6UZ-cu-inr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" text="User Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqv-xK-n9o">
+                        <rect key="frame" x="95" y="8" width="261" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="261" id="3L8-o3-fA5"/>
+                            <constraint firstAttribute="height" constant="21" id="PeT-G0-Zfn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tweet Content Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T9-pv-v2q">
+                        <rect key="frame" x="95" y="37" width="261" height="154"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="261" id="O6Y-c4-rgz"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="154" id="RD3-nj-CKc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qqv-xK-n9o" firstAttribute="top" secondItem="q2Q-te-TnZ" secondAttribute="topMargin" id="706-wt-y6K"/>
+                    <constraint firstItem="wks-2v-eEi" firstAttribute="top" secondItem="q2Q-te-TnZ" secondAttribute="topMargin" id="Fdp-nL-rSx"/>
+                    <constraint firstItem="wks-2v-eEi" firstAttribute="leading" secondItem="q2Q-te-TnZ" secondAttribute="leadingMargin" id="Hnf-D5-p53"/>
+                    <constraint firstItem="wks-2v-eEi" firstAttribute="leading" secondItem="q2Q-te-TnZ" secondAttribute="leadingMargin" id="Xkb-D2-WKP"/>
+                    <constraint firstItem="qqv-xK-n9o" firstAttribute="top" secondItem="q2Q-te-TnZ" secondAttribute="topMargin" id="eeK-BO-sxV"/>
+                    <constraint firstItem="3T9-pv-v2q" firstAttribute="bottom" secondItem="q2Q-te-TnZ" secondAttribute="bottomMargin" id="gQR-lx-uoj"/>
+                    <constraint firstItem="3T9-pv-v2q" firstAttribute="top" secondItem="qqv-xK-n9o" secondAttribute="bottom" constant="8" id="k5T-cX-9Hl"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="wks-2v-eEi" secondAttribute="bottom" constant="8" id="p50-vE-Q1P"/>
+                    <constraint firstItem="wks-2v-eEi" firstAttribute="top" secondItem="q2Q-te-TnZ" secondAttribute="topMargin" id="rwX-Bv-WB1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nib_tweetContent" destination="3T9-pv-v2q" id="eCH-lV-8x7"/>
+                <outlet property="nib_userImage" destination="wks-2v-eEi" id="ome-xR-Hy5"/>
+                <outlet property="nib_userName" destination="qqv-xK-n9o" id="nrA-Jv-e7S"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="175.5"/>
+        </tableViewCell>
+    </objects>
+</document>

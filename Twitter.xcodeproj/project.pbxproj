@@ -13,6 +13,14 @@
 		FF7093C61A5B33CF00C175CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7093C51A5B33CF00C175CB /* Images.xcassets */; };
 		FF7093C91A5B33CF00C175CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7093C71A5B33CF00C175CB /* LaunchScreen.xib */; };
 		FF7093D51A5B33CF00C175CB /* TwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7093D41A5B33CF00C175CB /* TwitterTests.swift */; };
+		FF7093E61A5B386B00C175CB /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7093E51A5B386B00C175CB /* Tweet.swift */; };
+		FF7093E81A5B4FF700C175CB /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7093E71A5B4FF700C175CB /* TweetCell.swift */; };
+		FFD22A7E1A5DE504003147B0 /* tweet.json in Resources */ = {isa = PBXBuildFile; fileRef = FFD22A7D1A5DE504003147B0 /* tweet.json */; };
+		FFD22A801A5DE548003147B0 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD22A7F1A5DE548003147B0 /* NetworkController.swift */; };
+		FFD22A861A5F3252003147B0 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD22A851A5F3252003147B0 /* TweetViewController.swift */; };
+		FFD22A8D1A6033D7003147B0 /* TweetNibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD22A8C1A6033D7003147B0 /* TweetNibCell.xib */; };
+		FFD22A8F1A6048D7003147B0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD22A8E1A6048D7003147B0 /* UserViewController.swift */; };
+		FFD22A911A60A12E003147B0 /* TweetNibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD22A901A60A12E003147B0 /* TweetNibCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,15 @@
 		FF7093CE1A5B33CF00C175CB /* TwitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7093D31A5B33CF00C175CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7093D41A5B33CF00C175CB /* TwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTests.swift; sourceTree = "<group>"; };
+		FF7093E51A5B386B00C175CB /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		FF7093E71A5B4FF700C175CB /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		FFD22A7D1A5DE504003147B0 /* tweet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tweet.json; path = "../../../LectureNotes/Sample Projects/Week 1/TweetFellows/TweetFellows/tweet.json"; sourceTree = "<group>"; };
+		FFD22A7F1A5DE548003147B0 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		FFD22A851A5F3252003147B0 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetViewController.swift; path = ../TweetViewController.swift; sourceTree = "<group>"; };
+		FFD22A8C1A6033D7003147B0 /* TweetNibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetNibCell.xib; sourceTree = "<group>"; };
+		FFD22A8E1A6048D7003147B0 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		FFD22A901A60A12E003147B0 /* TweetNibCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetNibCell.swift; sourceTree = "<group>"; };
+		FFD22A931A61F887003147B0 /* ParseJsonContent.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParseJsonContent.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +78,7 @@
 			children = (
 				FF7093BB1A5B33CF00C175CB /* Twitter */,
 				FF7093D11A5B33CF00C175CB /* TwitterTests */,
+				FF7093E91A5C826200C175CB /* Playgrounds */,
 				FF7093BA1A5B33CF00C175CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,9 +95,11 @@
 		FF7093BB1A5B33CF00C175CB /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				FFD22A921A61F82A003147B0 /* Playgrounds */,
+				FF7093DE1A5B33F300C175CB /* Model */,
+				FF7093E01A5B340600C175CB /* Controller */,
+				FF7093DF1A5B33FA00C175CB /* View */,
 				FF7093BE1A5B33CF00C175CB /* AppDelegate.swift */,
-				FF7093C01A5B33CF00C175CB /* ViewController.swift */,
-				FF7093C21A5B33CF00C175CB /* Main.storyboard */,
 				FF7093C51A5B33CF00C175CB /* Images.xcassets */,
 				FF7093C71A5B33CF00C175CB /* LaunchScreen.xib */,
 				FF7093BC1A5B33CF00C175CB /* Supporting Files */,
@@ -110,6 +130,53 @@
 				FF7093D31A5B33CF00C175CB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF7093DE1A5B33F300C175CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF7093E51A5B386B00C175CB /* Tweet.swift */,
+				FFD22A7D1A5DE504003147B0 /* tweet.json */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FF7093DF1A5B33FA00C175CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF7093C21A5B33CF00C175CB /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FF7093E01A5B340600C175CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF7093E71A5B4FF700C175CB /* TweetCell.swift */,
+				FFD22A7F1A5DE548003147B0 /* NetworkController.swift */,
+				FF7093C01A5B33CF00C175CB /* ViewController.swift */,
+				FFD22A851A5F3252003147B0 /* TweetViewController.swift */,
+				FFD22A8E1A6048D7003147B0 /* UserViewController.swift */,
+				FFD22A901A60A12E003147B0 /* TweetNibCell.swift */,
+				FFD22A8C1A6033D7003147B0 /* TweetNibCell.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FF7093E91A5C826200C175CB /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				FFD22A931A61F887003147B0 /* ParseJsonContent.playground */,
+			);
+			name = Playgrounds;
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		FFD22A921A61F82A003147B0 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7093C41A5B33CF00C175CB /* Main.storyboard in Resources */,
+				FFD22A8D1A6033D7003147B0 /* TweetNibCell.xib in Resources */,
 				FF7093C91A5B33CF00C175CB /* LaunchScreen.xib in Resources */,
 				FF7093C61A5B33CF00C175CB /* Images.xcassets in Resources */,
+				FFD22A7E1A5DE504003147B0 /* tweet.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD22A8F1A6048D7003147B0 /* UserViewController.swift in Sources */,
+				FFD22A801A5DE548003147B0 /* NetworkController.swift in Sources */,
 				FF7093C11A5B33CF00C175CB /* ViewController.swift in Sources */,
+				FFD22A861A5F3252003147B0 /* TweetViewController.swift in Sources */,
 				FF7093BF1A5B33CF00C175CB /* AppDelegate.swift in Sources */,
+				FF7093E61A5B386B00C175CB /* Tweet.swift in Sources */,
+				FF7093E81A5B4FF700C175CB /* TweetCell.swift in Sources */,
+				FFD22A911A60A12E003147B0 /* TweetNibCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +480,7 @@
 				FF7093DA1A5B33CF00C175CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF7093DB1A5B33CF00C175CB /* Build configuration list for PBXNativeTarget "TwitterTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +489,7 @@
 				FF7093DD1A5B33CF00C175CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
